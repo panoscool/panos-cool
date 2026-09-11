@@ -1,70 +1,47 @@
-Live app: https://panoscool.netlify.com/
+# panoscool
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My personal page: a short intro, the apps I've shipped (each with a launch button),
+and links to GitHub and Buy Me a Coffee.
 
-## Available Scripts
+Plain HTML, CSS and JavaScript — no framework, no build step, no dependencies.
 
-In the project directory, you can run:
+## Run it
 
-### `npm start`
+Open `index.html` directly, or serve the folder:
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+npx serve .          # or: python3 -m http.server 4321
+```
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Edit the content
 
-### `npm test`
+Everything on the page comes from **`assets/js/data.js`**:
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Field                  | What it does                                                     |
+| ---------------------- | ---------------------------------------------------------------- |
+| `links`                | GitHub / Buy Me a Coffee / LinkedIn URLs                         |
+| `console`              | Lines typed out in the hero terminal (`cmd` = input, `out` = response) |
+| `apps[]`               | One card each: `title`, `tagline`, `description`, `url`, `host`, `tags`, `accent`, `icon` |
+| `packages[]`           | The small npm strip under the grid — delete the array to hide it  |
 
-### `npm run build`
+App icons are inline SVG so they follow the theme. To use a real logo instead,
+add `logo: 'assets/img/my-logo.png'` to that app — the SVG in `icon` is kept as a
+fallback if the image fails to load.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The intro paragraph, name and role live in `index.html` (the `.hero__copy` block).
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Theming
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Light and dark are both first-class. Colours are CSS custom properties defined three
+times in `assets/css/styles.css`: once on `:root` (light), once under
+`prefers-color-scheme: dark` for visitors who haven't chosen, and once under
+`[data-theme="dark"]` so the switch wins either way. The header switch cycles
+**light / auto / dark** and remembers the choice in `localStorage`.
 
-### `npm run eject`
+Animations (cursor glow, circuit pulses, typing console, reveals) all switch off under
+`prefers-reduced-motion: reduce`.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Deploy
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Netlify is configured in `netlify.toml` (publish directory = repo root). Any static host
+works — there is nothing to compile.

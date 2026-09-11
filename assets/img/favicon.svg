@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 44" width="40" height="44">
+  <style>
+    .hex { fill: #0b5fef; stroke: #0b5fef; }
+    .glyph { stroke: #ffffff; }
+    @media (prefers-color-scheme: dark) {
+      .hex { fill: #0b1322; stroke: #33dfff; }
+      .glyph { stroke: #33dfff; }
+    }
+  </style>
+  <path class="hex" d="M20 1.5 37.5 11.5v21L20 42.5 2.5 32.5v-21z" stroke-width="2.5" />
+  <path class="glyph" d="M13 14v16h7m6-16v16m0-8 5-8m-5 8 5 8" fill="none" stroke-width="2.6"
+    stroke-linecap="round" stroke-linejoin="round" />
+</svg>

@@ -480,6 +480,17 @@ svg {
   transform: none;
 }
 
+/* LCP element: must paint without waiting for JS or an opacity fade */
+.hero__copy {
+  animation: rise 0.7s var(--ease) both;
+}
+
+@keyframes rise {
+  from {
+    transform: translateY(20px);
+  }
+}
+
 /* ── 3. Backdrop ──────────────────────────────────────────────────────────── */
 
 .backdrop {

@@ -193,7 +193,9 @@
         '<span class="pkg__mark" aria-hidden="true">npm</span>' +
         '<span><span class="pkg__name">' + escapeHtml(pkg.name) + '</span>' +
         '<span class="pkg__desc">' + escapeHtml(pkg.description || '') + '</span></span>';
-      list.appendChild(link);
+      var item = el('li');
+      item.appendChild(link);
+      list.appendChild(item);
     });
   }
 

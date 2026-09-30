@@ -1,0 +1,20 @@
+# panoscool
+
+> Personal page of Lavdimir K. (panoscool), a software engineer in Dubai building web apps with TypeScript, React and Next.js.
+
+## Apps
+
+- [hmlx](https://hmlx.app): Personal, joint and split finances in one ledger, with multi-currency settle-up, budgets and forecasts.
+- [Truth or Dare](https://tord.panoscool.com): The classic party game, with categories and custom decks.
+- [Blank Quest](https://blankquest.netlify.app): A keyboard-friendly hangman word game.
+
+## Packages
+
+- [@panoscool/fetch-client](https://www.npmjs.com/package/@panoscool/fetch-client): A small typed HTTP client for fetch with interceptors, JSON handling and structured errors.
+- [@panoscool/query-string](https://www.npmjs.com/package/@panoscool/query-string): URL query string parsing and serialisation with configurable array formats.
+
+## Contact
+
+- [GitHub](https://github.com/panoscool)
+- [LinkedIn](https://linkedin.com/in/lkullolli)
+- [Buy Me a Coffee](https://buymeacoffee.com/panoscool)

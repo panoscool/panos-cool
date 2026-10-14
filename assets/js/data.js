@@ -21,24 +21,24 @@ window.PAGE_DATA = {
   /* Lines typed out in the hero console. `out` lines are printed as responses. */
   console: [
     { cmd: 'whoami' },
-    { out: 'Lavdimir K.  ·  front-end engineer  ·  @panoscool' },
+    { out: 'Lavdimir K.  ·  software engineer  ·  @panoscool' },
     { cmd: 'cat stack.json --top' },
     { out: 'TypeScript · React · Next.js · Node · MongoDB' },
-    { cmd: 'apps --status' },
-    { out: '3 live  ·  2 packages on npm  ·  0 downtime today' },
-    { cmd: 'echo $MOTTO' },
-    { out: 'Ship small. Ship often. Keep it fast.' },
+    { cmd: 'apps --list' },
+    { out: 'hmlx · Truth or Dare · Blank Quest' },
+    { cmd: 'packages --list' },
+    { out: '@panoscool/fetch-client · @panoscool/query-string' },
   ],
 
   apps: [
     {
       title: 'hmlx',
-      tagline: 'Personal, joint and split finances in one ledger.',
+      tagline: 'Personal expenses, household costs, and split bills.',
       description:
-        'Track personal spending, share a joint wallet, split expenses with friends, settle up across currencies — plus budgets and forecasts so next month is not a surprise.',
+        'Record expenses in their original currency, split costs, and track repayments. Paid plans add budgets and forecasts.',
       url: 'https://hmlx.app',
       host: 'hmlx.app',
-      tags: ['Finance', 'Multi-currency', 'Splits'],
+      tags: ['Expenses', 'Split bills', 'Multi-currency'],
       accent: '#22c1e0',
       icon: `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
         <rect x="6" y="9" width="36" height="30" rx="5" stroke="currentColor" stroke-width="2.2"/>
@@ -50,12 +50,12 @@ window.PAGE_DATA = {
     },
     {
       title: 'Truth or Dare',
-      tagline: 'The classic party game, with a minimal face.',
+      tagline: 'Play on one device or in a private room.',
       description:
-        'Pass the phone around, pick a category — funny to uncensored — and take your turn. Add your own questions and dares, and keep it lighthearted.',
+        'Choose categories and play on a shared device without an account. Sign in to host a private room for friends on their own phones and add custom truths and dares.',
       url: 'https://tord.panoscool.com',
       host: 'tord.panoscool.com',
-      tags: ['Party game', 'Categories', 'Custom decks'],
+      tags: ['Private rooms', 'Custom prompts'],
       accent: '#ff6b9d',
       icon: `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
         <rect x="5" y="14" width="24" height="24" rx="6" stroke="currentColor" stroke-width="2.2"/>
@@ -68,12 +68,12 @@ window.PAGE_DATA = {
     },
     {
       title: 'Blank Quest',
-      tagline: 'Hangman, one letter at a time.',
+      tagline: 'A hangman word game.',
       description:
-        'A word-guessing game built for quick rounds: fill in the blanks before your misses run out. Clean, keyboard-friendly, and it follows your light or dark theme.',
+        'Guess letters to complete a word before you run out of attempts. Supports keyboard input and light and dark themes.',
       url: 'https://blankquest.netlify.app',
       host: 'blankquest.netlify.app',
-      tags: ['Word game', 'Keyboard', 'Quick rounds'],
+      tags: ['Word game', 'Categories', 'Difficulty'],
       accent: '#8b7cff',
       icon: `<svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
         <rect x="4" y="13" width="12" height="15" rx="3" stroke="currentColor" stroke-width="2.2"/>
@@ -89,7 +89,7 @@ window.PAGE_DATA = {
   packages: [
     {
       name: '@panoscool/fetch-client',
-      description: 'A small typed HTTP client for fetch — interceptors, JSON handling, structured errors.',
+      description: 'A typed fetch client with interceptors, JSON handling, and structured errors.',
       url: 'https://www.npmjs.com/package/@panoscool/fetch-client',
     },
     {

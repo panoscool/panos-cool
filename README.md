@@ -40,8 +40,3 @@ times in `assets/css/styles.css`: once on `:root` (light), once under
 
 Animations (cursor glow, circuit pulses, typing console, reveals) all switch off under
 `prefers-reduced-motion: reduce`.
-
-## Deploy
-
-Netlify is configured in `netlify.toml` (publish directory = repo root). Any static host
-works — there is nothing to compile.
